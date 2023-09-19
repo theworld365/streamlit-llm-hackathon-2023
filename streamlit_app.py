@@ -5,8 +5,8 @@ from langchain.agents import create_pandas_dataframe_agent
 from langchain.agents.agent_types import AgentType
 
 # Page title
-st.set_page_config(page_title='🦜🔗 Ask the Data App')
-st.title('🦜🔗 Ask the Data App')
+st.set_page_config(page_title='🦜🔗 Cloud cost saver App')
+st.title('🦜🔗 Cloud cost saver App')
 
 # Load CSV file
 def load_csv(input_csv):
@@ -28,9 +28,8 @@ def generate_response(csv_file, input_query):
 # Input widgets
 uploaded_file = st.file_uploader('Upload a CSV file', type=['csv'])
 question_list = [
-  'How many rows are there?',
-  'What is the range of values for MolWt with logS greater than 0?',
-  'How many rows have MolLogP value greater than 0.',
+  'Provide recommendations to optimise the resources and save the cloud cost bill',
+  'Generate terraform code template based on the recommendations?',
   'Other']
 query_text = st.selectbox('Select an example query:', question_list, disabled=not uploaded_file)
 openai_api_key = st.text_input('OpenAI API Key', type='password', disabled=not (uploaded_file and query_text))
