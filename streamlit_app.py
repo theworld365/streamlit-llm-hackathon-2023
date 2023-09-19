@@ -27,10 +27,11 @@ def generate_response(csv_file, input_query, responses):
   return responses
 
 # Input widgets
-uploaded_file = st.file_uploader('Upload a CSV file', type=['csv'])
+uploaded_file = st.file_uploader('Upload the cloud bill CSV file', type=['csv'])
 question_list = [
   'Provide recommendations to optimize the resources and save the cloud cost bill',
-  'Generate Terraform code template based on the recommendations?',
+  'Generate Terraform code template based on the recommendations',
+  'Generate Terraform documentation based on the generated code',
   'Other']
 query_text = st.selectbox('Select an example query:', question_list, disabled=not uploaded_file)
 openai_api_key = st.text_input('OpenAI API Key', type='password', disabled=not (uploaded_file and query_text))
@@ -47,8 +48,8 @@ if openai_api_key.startswith('sk-') and (uploaded_file is not None):
   if st.button('Generate Response'):
     responses = generate_response(uploaded_file, query_text, responses)
 
-# Display previous responses
+# Display responses in a loop
 if responses:
-  st.header('Previous Responses')
+  st.header('Responses')
   for i, response in enumerate(responses):
     st.success(f'Response {i+1}: {response}')
