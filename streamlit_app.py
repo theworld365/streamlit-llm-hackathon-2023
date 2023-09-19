@@ -30,7 +30,8 @@ def generate_response(csv_file, input_query, responses):
 uploaded_file = st.file_uploader('Upload the cloud bill CSV file', type=['csv'])
 question_list = [
   'Provide recommendations to optimize the resources and save the cloud cost bill',
-  'Provide recommendations to optimize the resources and generate Terraform code template based on the recommendations',
+  'Generate Terraform code template based on the suggested recommendations',
+  'Generate Terraform documentation template based on the suggested code',
   'Other']
 query_text = st.selectbox('Select an example query:', question_list, disabled=not uploaded_file)
 openai_api_key = st.text_input('OpenAI API Key', type='password', disabled=not (uploaded_file and query_text))
