@@ -22,17 +22,15 @@ The Cloud Cost Saver App is a Streamlit-based application that allows users to i
    git clone https://github.com/yourusername/cloud-cost-saver-app.git
    cd cloud-cost-saver-app
 
-Install the required Python packages:
+2. Install the required Python packages:
 
-bash
-Copy code
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
-Run the Streamlit app:
+3. Run the Streamlit app:
 
-bash
-Copy code
-streamlit run streamlit_app.py
+   ```bash
+   streamlit run streamlit_app.py
 
 Use the app by uploading a CSV file and interacting with the provided queries.
 
