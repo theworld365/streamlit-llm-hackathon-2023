@@ -1,0 +1,17 @@
+Date,Service,Resource,UsageType,Cost
+2023-08-01,EC2,Instance-A,m5.large,80.25
+2023-08-01,RDS,DB-Instance-1,db.r5.large,70.75
+2023-08-01,S3,Bucket-1,Storage-Standard,25.50
+2023-08-01,Lambda,Function-1,RequestCount,12.20
+2023-08-02,EC2,Instance-B,t3.medium,40.80
+2023-08-02,RDS,DB-Instance-2,db.t3.small,55.30
+2023-08-02,S3,Bucket-2,Storage-Standard,20.75
+2023-08-02,Lambda,Function-2,RequestCount,18.10
+2023-08-03,EC2,Instance-A,m5.large,78.75
+2023-08-03,RDS,DB-Instance-1,db.r5.large,72.50
+2023-08-03,S3,Bucket-1,Storage-Standard,28.25
+2023-08-03,Lambda,Function-1,RequestCount,11.90
+2023-08-04,EC2,Instance-B,t3.medium,42.10
+2023-08-04,RDS,DB-Instance-2,db.t3.small,50.80
+2023-08-04,S3,Bucket-2,Storage-Standard,22.30
+2023-08-04,Lambda,Function-2,RequestCount,17.80
